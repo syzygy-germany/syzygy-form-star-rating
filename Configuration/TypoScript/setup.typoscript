@@ -1,0 +1,23 @@
+plugin.tx_form {
+    settings {
+        yamlConfigurations.40 = EXT:syzygy_form_star_rating/Configuration/Yaml/BaseSetup.yaml
+    }
+
+    view {
+        partialRootPaths.100 = EXT:syzygy_form_star_rating/Resources/Private/Frontend/Partials/
+    }
+}
+
+module.tx_form {
+    settings {
+        yamlConfigurations {
+            40 = EXT:syzygy_form_star_rating/Configuration/Yaml/BaseSetup.yaml
+            50 = EXT:syzygy_form_star_rating/Configuration/Yaml/FormEditorSetup.yaml
+        }
+    }
+    view {
+        partialRootPaths {
+            40 = EXT:syzygy_form_star_rating/Resources/Private/Backend/Partials/
+        }
+    }
+}

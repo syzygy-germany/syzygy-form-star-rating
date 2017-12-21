@@ -1,0 +1,26 @@
+.. |img-1|      image:: ../Images/star_rating_01.png
+   :height: 319
+   :width: 475
+.. :align: left
+.. :alt: Contact
+.. :border: 0
+.. :name: Screenshot 1
+.. :vspace: 52
+
+.. |img-2|      image:: ../Images/star_rating_02.png
+   :height: 654
+   :width: 635
+.. :align: left
+.. :alt: Contact
+.. :border: 0
+.. :name: Screenshot 2
+.. :vspace: 52
+
+.. |img-3|      image:: ../Images/star_rating_03.png
+   :height: 577
+   :width: 1268
+.. :align: left
+.. :alt: Contact
+.. :border: 0
+.. :name: Screenshot 3
+.. :vspace: 52
