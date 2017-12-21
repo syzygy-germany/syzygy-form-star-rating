@@ -1,0 +1,33 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            stylesheets:
+              300: 'EXT:syzygy_form_star_rating/Resources/Public/Styles/starRating.css'
+            dynamicRequireJsModules:
+              additionalViewModelModules:
+                - 'TYPO3/CMS/SyzygyFormStarRating/Backend/FormEditor/FormStarRatingViewModel'
+
+            formEditorPartials:
+              FormElement-FormStarRating: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            FormStarRating:
+              formEditor:
+                label: 'formEditor.elements.FormStarRating.label'
+                group: custom
+                groupSorting: 1000
+                iconIdentifier: 'form-star-rating'
+                editors:
+                  300:
+                    identifier: 'noRating'
+                    templateName: 'Inspector-CheckboxEditor'
+                    label: 'formEditor.elements.FormStarRating.enable_no_rating'
+                    propertyPath: 'properties.noRating'
+      mixins:
+        formElementMixins:
+          FormStarRatingMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'

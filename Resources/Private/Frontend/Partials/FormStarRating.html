@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" xmlns:sfsr="http://typo3.org/ns/SyzygyTypo3\SyzygyFormStarRating\ViewHelpers" data-namespace-typo3-fluid="true">
+<formvh:renderRenderable renderable="{element}">
+    <f:render partial="Field/Field" arguments="{element: element}" contentAs="elementContent">
+        <sfsr:includeCssFile path="EXT:syzygy_form_star_rating/Resources/Public/Styles/starRating.css" compress="true" />
+
+        <span class="syzygy-form-star-rating">
+            <f:if condition="{element.properties.noRating}">
+                <div class="syzygy-form-star-rating__no-rating">
+                    <f:form.radio
+                            id="{element.uniqueIdentifier}-0"
+                            class="syzygy-form-star-rating__no-rating__radio"
+                            value="0"
+                            name="{element.uniqueIdentifier}"
+                    />
+                    <label for="{element.uniqueIdentifier}-0" class="syzygy-form-star-rating__no-rating__label">
+                        <span><f:translate key="LLL:EXT:syzygy_form_star_rating/Resources/Private/Language/Frontend.xlf:formEditor.elements.FormStarRating.no_rating" /></span>
+                    </label>
+                </div>
+            </f:if>
+            <f:for each="{0:1, 1:2, 2:3, 3:4, 4:5}" as="number">
+                <f:form.radio
+                        id="{element.uniqueIdentifier}-{number}"
+                        class="syzygy-form-star-rating__input"
+                        value="{number}"
+                        name="{element.uniqueIdentifier}"
+                />
+                <label class="syzygy-form-star-rating__star" for="{element.uniqueIdentifier}-{number}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 95.11">
+                        <polygon points="50 0 61.8 36.33 100 36.33 69.1 58.78 80.9 95.11 50 72.65 19.1 95.11 30.9 58.78 0 36.33 38.2 36.33 50 0"></polygon>
+                    </svg>
+                </label>
+            </f:for>
+            </span>
+    </f:render>
+</formvh:renderRenderable>
+</html>
