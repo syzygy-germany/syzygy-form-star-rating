@@ -1,0 +1,16 @@
+{
+    "name": "syzygy-typo3/syzygy-form-star-rating",
+    "type": "typo3-cms-extension",
+    "description": "SYZYGY Base Extension for TYPO3 CMS",
+    "homepage": "http://www.syzygy.de",
+    "license": [""],
+    "require": {
+        "typo3/cms-core": ">=8.7.0,<8.7.99",
+        "typo3/cms-form": "^8.7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "SyzygyTypo3\\SyzygyFormStarRating\\": "Classes"
+        }
+    }
+}

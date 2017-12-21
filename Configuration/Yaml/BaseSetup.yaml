@@ -1,0 +1,27 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            formEditorPartials:
+              FormElement-FormStarRating: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:syzygy_form_star_rating/Resources/Private/Frontend/Templates/'
+                partialRootPaths:
+                  100: 'EXT:syzygy_form_star_rating/Resources/Private/Frontend/Partials/'
+                layoutRootPaths:
+                  100: 'EXT:syzygy_form_star_rating/Resources/Private/Frontend/Layouts/'
+
+            FormStarRating:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormStarRatingMixin'
+      mixins:
+        formElementMixins:
+          FormStarRatingMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'
