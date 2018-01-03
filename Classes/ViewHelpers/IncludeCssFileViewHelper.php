@@ -78,7 +78,7 @@ class IncludeCssFileViewHelper extends AbstractViewHelper implements CompilableI
             $path = $GLOBALS['TSFE']->tmpl->getFileName($path);
         }
 
-        if (strtolower(substr($path, -4)) === '.css') {
+        if (static::pathEndsOnCssSuffix($path)) {
             $pageRenderer->addCssFile(
                 $path,
                 $rel = 'stylesheet',
@@ -90,5 +90,14 @@ class IncludeCssFileViewHelper extends AbstractViewHelper implements CompilableI
                 $excludeFromConcatenation
             );
         }
+    }
+
+    /**
+     * @param string $path
+     * @return bool
+     */
+    private static function pathEndsOnCssSuffix(string $path): bool
+    {
+        return strtolower(substr($path, -4)) === '.css';
     }
 }
